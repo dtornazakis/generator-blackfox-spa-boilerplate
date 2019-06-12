@@ -1,0 +1,29 @@
+{
+  "name": "generator-blackfox-spa-boilerplate",
+  "version": "1.0.0",
+  "description": "A Yeoman generator to get you up and running with a powerful front end build system structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtornazakis/generator-blackfox-spa-boilerplate.git"
+  },
+  "keywords": [
+    "spa",
+    "generator"
+  ],
+  "author": "Dimitris Tornazakis <dt@blackfox.gr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtornazakis/generator-blackfox-spa-boilerplate/issues"
+  },
+  "homepage": "https://github.com/dtornazakis/generator-blackfox-spa-boilerplate#readme",
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  },
+  "files": [
+    "app"
+  ]
+}
