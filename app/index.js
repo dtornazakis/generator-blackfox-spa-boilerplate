@@ -20,9 +20,8 @@ module.exports = class extends Generator {
 			this.destinationRoot(answers.name);
 
 			this.fs.copyTpl(
-				this.templatePath('index.html'),
-				this.destinationPath('index.html'),
-				{ title: 'CV generator world!', description: 'The main system of the apocalypse' }
+				this.templatePath('src'),
+				this.destinationPath('./src')
 			);
 		});
 	}
