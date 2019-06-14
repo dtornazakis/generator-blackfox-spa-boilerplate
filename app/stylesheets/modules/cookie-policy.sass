@@ -1,0 +1,43 @@
+$font-size: 14px
+$padding-particle: 5px
+$cookie-policy-color: #ffee33
+
+.mdl-cookie-policy
+	+transition(all, 0.5s, ease-in-out)
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: 500
+	display: block
+	width: calc(100% - (#{$padding-particle} * 4))
+	padding: $padding-particle ($padding-particle * 2)
+
+	line-height: $font-size
+	font-size: $font-size
+	text-align: center
+
+	background-color: rgba($cookie-policy-color, 0.9)
+
+.mdl-cookie-policy__accept
+		display: inline-block
+		padding: $padding-particle ($padding-particle * 2)
+		border-radius: 3px
+
+		font-size: $font-size * 0.8
+		font-weight: 600
+		font-style: normal
+		text-decoration: none
+
+		color: $theme-color-4
+		background-color: $theme-shade-color-1
+
+		transition: all 0.2s ease-in-out
+
+		&:hover
+			background-color: darken($theme-shade-color-1, 20%)
+
+.mdl-cookie-policy__link
+		color: $theme-black
+		font-weight: 600
+		text-decoration: none
+		border-bottom: 1px solid $theme-black

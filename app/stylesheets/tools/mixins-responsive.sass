@@ -1,0 +1,19 @@
+=up-to-mobile
+  @media (max-width: #{$tablet-width})
+    @content
+
+=up-to-tablet
+  @media (max-width: #{$desktop-width})
+    @content
+
+=mobile
+  @media (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width})
+    @content
+
+=tablet
+  @media (min-width: #{$tablet-width + 1}) and (max-width: #{$desktop-width})
+    @content
+
+=desktop
+  @media (min-width: #{$desktop-width + 1})
+    @content

@@ -1,0 +1,207 @@
+/* --- <Variables> --- */
+$basic-color: $theme-shade-color-2
+$error-color: $message-error-color
+$info-color: $message-info-color
+$success-color: $message-success-color
+$warning-color: $message-warning-color
+$material-dark: #323232
+/* --- </Variables> --- */
+
+/* --- <Mixins> --- */
+=format-message($color, $percentage, $content: "")
+	background-color: lighten($color, $percentage)
+	border-color: $color
+
+	&:after
+		content: $content
+		color: $color
+
+	.mdl-message__title, .mdl-message__text
+		color: $color
+
+	a
+		+text-link($color, normal)
+
+	.mdl-message__dismiss
+		color: $color
+/* --- </Mixins> --- */
+
+/* --- <Root> --- */
+.mdl-message
+	clear: both
+	position: relative
+	box-sizing: border-box
+	border: 1px solid $theme-shade-color-4
+
+	article
+		padding: 20px 15px
+
+	.mdl-message__text, .mdl-message__header, .mdl-message__action
+		font-size: 14px
+		line-height: 1.4em
+
+	.mdl-message__text, .mdl-message__header
+		margin-left: 55px
+		margin-right: 30px
+		margin-bottom: 2px
+
+	.mdl-message__title
+		text-transform: uppercase
+		font-weight: 800
+		font-size: 14px
+
+	.mdl-message__dismiss
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -17px
+		padding: 10px
+		cursor: pointer
+		opacity: 0.5
+
+		&:hover
+			opacity: 1
+
+	&:after
+		position: absolute
+		font-size: 50px
+		top: 50%
+		left: 15px
+		margin-top: -25px
+		font-family: FontAwesome
+		z-index: 1
+/* --- </Root> --- */
+
+/* --- <Types> --- */
+.mdl-message--regular
+
+.mdl-message--modal
+	position: fixed
+	bottom: 50%
+	left: 50%
+	z-index: 99999
+
+	min-width: 200px
+	// max-width: 500px
+	display: block
+	// padding: 20px
+	border: 1px solid #eee // TODO (DT): make dynamic
+	box-shadow: 0 4px 6px -1px #aaa // TODO (DT): make dynamic
+
+	text-align: left
+	font-size: 14px
+	background: $theme-color-4
+	animation: scale-up 0.2s
+
+	&.dismiss
+		animation: scale-down 0.2s
+
+.mdl-message--toast
+	position: fixed
+	bottom: 0
+	left: 0
+	z-index: 0
+	width: 100%
+	display: block
+	background-color: transparent
+	text-align: center
+	font-size: 14px
+
+	+transition(all, 0.3s, ease-in-out)
+	transform: translate(0, 100px);
+
+	&.mdl-message--show
+		// hack to overcome the inline-block margin that occurs
+		transform: translate(0, 2px);
+
+	article
+		position: relative
+		z-index: 9999
+		display: inline-block
+		border: none
+		padding: 14px 24px
+
+		overflow: hidden
+
+		text-align: center
+		background-color: $material-dark
+
+		+up-to-mobile
+			width: 100%
+			box-sizing: border-box
+			text-align: left
+
+	.mdl-message__text
+		display: block
+		float: left
+		margin: 0
+		+up-to-mobile
+			float: left
+
+	.mdl-message__dismiss
+		display: none
+
+	.mdl-message__action
+		display: block
+		float: right
+		text-transform: uppercase
+		padding-left: 48px
+		color: $warning-color
+		font-weight: 700
+
+		+up-to-mobile
+			float: right
+/* --- </Types> --- */
+
+/* --- <Themes> --- */
+.mdl-message--basic
+	+format-message($basic-color, 40%)
+
+	.mdl-message__text, .mdl-message__header
+		margin-left: 0
+
+.mdl-message--error
+	+format-message($error-color, 50%, "\f057")
+
+.mdl-message--info
+	+format-message($info-color, 40%, "\f05a")
+
+.mdl-message--success
+	+format-message($success-color, 55%, "\f058")
+
+.mdl-message--warning
+	+format-message($warning-color, 42%, "\f071")
+/* --- </Themes> --- */
+
+/* --- <Modifiers> --- */
+.mdl-message--toast
+	&.mdl-message--basic, &.mdl-message--error, &.mdl-message--info, &.mdl-message--success, &.mdl-message--warning
+		background-color: transparent
+		border: none
+
+	&:after
+		content: ''
+
+	.mdl-message__text
+		color: #fff
+
+	&.mdl-message--basic
+		.mdl-message__action
+			color: $basic-color
+
+	&.mdl-message--error
+		.mdl-message__action
+			color: $error-color
+
+	&.mdl-message--info
+		.mdl-message__action
+			color: $info-color
+
+	&.mdl-message--success
+		.mdl-message__action
+			color: $success-color
+
+	&.mdl-message--warning
+		.mdl-message__action
+			color: $warning-color
+/* --- </Modifiers> --- */

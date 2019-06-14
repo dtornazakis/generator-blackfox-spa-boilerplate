@@ -1,0 +1,119 @@
+%mdl-markdown--module
+
+	$md-space: 10px
+
+	h1, h2, h3, h4, h5, h6
+		font-family: $theme-primary-font
+		font-weight: 800
+		text-transform: uppercase
+
+	h1
+		padding: ($md-space * 4) 0 $md-space 0
+		font-size: $theme-font-size * 2
+
+	h2
+		padding: ($md-space * 2) 0 $md-space 0
+		font-size: $theme-font-size * 1.5
+
+	h3
+		padding: ($md-space * 2) 0 $md-space 0
+		font-size: $theme-font-size * 1.2
+
+	h4
+		padding: $md-space 0
+		font-size: $theme-font-size * 1
+
+	h5
+		padding: $md-space 0
+		font-size: $theme-font-size * 0.8
+
+	h6
+		padding: 0
+		font-size: $theme-font-size * 0.75
+
+	p
+		font-size: $theme-font-size
+		line-height: $theme-line-height
+		font-family: $theme-serif-font
+		max-width: 750px
+		padding-bottom: $md-space
+		text-align: justify
+
+	ul, ol
+		list-style: disc
+		line-height: $theme-line-height
+		margin: 0 0 $md-space ($md-space * 2)
+
+	ol
+		list-style: decimal
+
+	strong
+		font-family: inherit
+		font-weight: 800
+
+	em
+		font-family: inherit
+		font-style: italic
+
+	code
+		padding: 0 $md-space
+		font-family: monospace
+		line-height: $theme-line-height
+		background: $theme-shade-color-4
+		border-radius: 3px
+
+	pre
+		margin-bottom: $md-space
+		padding: $md-space ($md-space * 2)
+		background-color: $theme-shade-color-4
+		line-height: 1.4em
+		border-radius: 3px
+
+		code
+			padding: 0
+
+	blockquote
+		padding-left: $md-space
+		border-left: ($md-space / 2) solid $theme-shade-color-4
+		margin-bottom: $md-space
+
+	blockquote
+		p
+			font-family: $theme-primary-font
+			padding-bottom: ($md-space / 2)
+
+	hr
+		border: none
+		border-bottom: 1px solid $theme-shade-color-3
+		padding: 0
+		margin: ($md-space * 2) 0 ($md-space * 3) 0
+
+	table
+		margin: $md-space 0 ($md-space * 2) 0
+		border: 1px solid $theme-shade-color-3
+
+		caption
+			caption-side: bottom
+			padding: $md-space
+			font-size: $theme-font-size * 0.8
+			font-style: italic
+			text-align: center
+
+		th, td
+			border: 1px solid $theme-shade-color-3
+			padding: $md-space ($md-space * 2)
+			vertical-align: middle
+
+		th
+			font-weight: 800
+			background-color: $theme-shade-color-4
+
+		tfoot td
+			background-color: $theme-shade-color-4
+
+		tr:nth-child(2n)
+			background-color: $theme-shade-color-5
+
+.content--markdown
+	max-width: 750px
+	@extend %mdl-markdown--module

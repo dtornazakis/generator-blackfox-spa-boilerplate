@@ -1,0 +1,48 @@
+%mdl-menu--module
+
+	&.mdl-menu--fixed
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 50
+		width: 100%
+
+	.mdl-menu__wrapper
+		background-color: #448
+
+		float: left
+		width: 100%
+		background-color: $theme-color-1
+
+		+up-to-mobile
+			display: none
+
+	.mdl-menu__list-wrapper
+		display: block
+		text-align: right
+
+	.mdl-menu__list
+		padding: 30px 1vw
+		font-family: $theme-primary-font
+		display: inline-block
+		text-transform: uppercase
+		color: $theme-text-color-2
+		font-weight: 600
+		font-size: 16px
+
+		+up-to-mobile
+			padding: 10px 0
+			width: 33.333333%
+
+	.mdl-menu__item
+		+text-link($theme-color-4, normal, none)
+		position: relative
+		padding: 0 10px
+
+		&.mdl-menu__item--active
+			border-bottom: 3px solid $theme-color-2
+			color: invert($theme-color-1);
+			border-color: invert($theme-color-1);
+
+.mdl-menu
+	@extend %mdl-menu--module
