@@ -77,36 +77,36 @@ module.exports = class extends Generator {
 			);
 
 			this.fs.copy(
-				this.templatePath('.babelrc'),
+				this.templatePath('_babelrc'),
 				this.destinationPath('.babelrc')
 			);
 
 			this.fs.copy(
-				this.templatePath('.editorconfig'),
+				this.templatePath('_editorconfig'),
 				this.destinationPath('.editorconfig')
 			);
 
 			this.fs.copy(
-				this.templatePath('.eslintrc.js'),
+				this.templatePath('_eslintrc.js'),
 				this.destinationPath('.eslintrc.js')
 			);
 
 			this.fs.copy(
-				this.templatePath('.gitignore'),
+				this.templatePath('_gitignore'),
 				this.destinationPath('.gitignore')
 			);
 
 			this.fs.copy(
-				this.templatePath('gulpfile.js'),
+				this.templatePath('_gulpfile.js'),
 				this.destinationPath('gulpfile.js')
 			);
 			this.fs.copy(
-				this.templatePath('README.md'),
+				this.templatePath('_README.md'),
 				this.destinationPath('README.md')
 			);
 
 			this.fs.copy(
-				this.templatePath('rollup.config.js'),
+				this.templatePath('_rollup.config.js'),
 				this.destinationPath('rollup.config.js')
 			);
 
