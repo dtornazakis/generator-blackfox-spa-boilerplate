@@ -104,6 +104,9 @@ gulp.task('compile-templates', function() {
 
 gulp.task('copy-assets', function() {
 
+	gulp.src(input.html)
+	.pipe(gulp.dest(output.root));
+
 	gulp.src(input.images)
 	.pipe(gulp.dest(output.images));
 
@@ -136,11 +139,11 @@ gulp.task('live-reload', function() {
 });
 
 gulp.task('build', function() {
-	runSequence('compile-templates', ['copy-assets', 'compile-css', 'compile-scripts'],'token-replace');
+	runSequence(['copy-assets', 'compile-css', 'compile-scripts'],'token-replace');
 });
 
 gulp.task('serve', function() {
-	runSequence('compile-templates', ['copy-assets', 'compile-css', 'compile-scripts'],'token-replace', 'live-reload', 'watch');
+	runSequence(['copy-assets', 'compile-css', 'compile-scripts'],'token-replace', 'live-reload', 'watch');
 });
 
 gulp.task('deploy', ['build', 'optimize-images', 'upload']);
