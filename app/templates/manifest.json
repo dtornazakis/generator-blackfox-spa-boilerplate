@@ -1,21 +1,21 @@
 {
-	"name":"{%tokens.meta.title%}",
-	"short_name":"{%tokens.meta.shortTitle%}",
+	"name":"<%= title %>",
+	"short_name":"<%= shortTitle %>",
 	"icons":[
 	{
 		"type": "image/png",
 		"sizes": "154x154",
-		"src": "{%tokens.protocol%}{%tokens.domain%}{%tokens.port%}/images/logo.png"
+		"src": "<%= url %>images/logo.png"
 	},
 	{
 		"type": "image/png",
 		"sizes": "114x114",
-		"src": "{%tokens.protocol%}{%tokens.domain%}{%tokens.port%}/images/logo.png"
+		"src": "<%= url %>images/logo.png"
 	}
 	],
-	"theme_color": "{%tokens.meta.theme%}",
-	"background_color": "{%tokens.meta.theme%}",
+	"theme_color": "<%= theme %>",
+	"background_color": "<%= theme %>",
 	"start_url": "./?utm_source=web_app_manifest",
-	"display": "browser",
+	"display": "fullscreen",
 	"orientation": "portrait"
 }

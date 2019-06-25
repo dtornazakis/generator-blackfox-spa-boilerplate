@@ -1,0 +1,70 @@
+{
+  "name": "<%= packageName %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "main": "./src/scripts/index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "blackfox-spa-generator": "^1.0.3",
+    "cors": "^2.8.5",
+    "navigo": "^7.1.2",
+    "nodemailer": "^4.7.0",
+    "showdown": "^1.9.0",
+    "tippy.js": "^3.2.0",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "body-parser": "~1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-token-replace": "^1.1.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-strip": "^1.2.0",
+    "run-sequence": "^2.2.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dt_blackfox@bitbucket.org/twentysixoddravens/base-repository.git"
+  },
+  "keywords": [
+    "base",
+    "repository",
+    "skeleton",
+    "root",
+    "project"
+  ],
+  "author": "Dimitris Tornazakis <dtornazakis@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/twentysixoddravens/base-repository#readme"
+}

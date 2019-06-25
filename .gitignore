@@ -1,2 +1,8 @@
+.babelrc
+.editorconfig
+.eslintrc.js
+gulpfile.js
+README.md
+rollup.config.js
 node_modules/
 src/
