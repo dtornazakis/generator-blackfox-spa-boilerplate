@@ -1,21 +1,24 @@
 {
   "tokens" : {
-    "robots" : "index,follow",
+    "robots" : "noindex,nofollow",
     "domain" : "localhost",
     "protocol" : "http://",
     "port" : ":8888",
-    "api" : "http://localhost:7777/api/v1/",
+    "api" : "http://localhost:8888/api/v1/",
     "sitemap": "http://localhost:8888/",
     "googleTagManagerCode": "GTM-XXXXXXX",
     "googleTagManagerEnvSnippetHEAD": "",
     "googleTagManagerEnvSnippetBODY": "",
     "meta": {
-      "title": "Title",
-      "shortTitle": "S. Title",
-      "description": "Description",
+      "title": "localhost | <%= title %>",
+      "shortTitle": "localhost | <%= shortTitle %>",
+      "description": "localhost | <%= description %>",
       "keywords": "keyword 1, keyword 2",
       "author": "Dimitris Tornazakis",
-      "theme": "#000000"
+      "theme": "<%= theme %>",
+      "email": "dt@blackfox.gr",
+      "phone": "(+30) 210.00.00.000",
+      "address": "___, ____, _____, GREECE",
     }
   }
 }

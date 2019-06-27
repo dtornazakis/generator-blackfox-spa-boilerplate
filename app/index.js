@@ -159,6 +159,7 @@ module.exports = class extends Generator {
 					port: answers.port,
 					title: answers.title,
 					shortTitle: answers.shortTitle || answers.title,
+					description: answers.description,
 					theme: answers.theme ? '#' + answers.theme : '#000000'
 				}
 			);

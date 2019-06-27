@@ -12,7 +12,7 @@
     "meta": {
       "title": "<%= title %>",
       "shortTitle": "<%= shortTitle %>",
-      "description": "Description",
+      "description": "<%= description %>",
       "keywords": "keyword 1, keyword 2",
       "author": "Dimitris Tornazakis",
       "theme": "<%= theme %>",

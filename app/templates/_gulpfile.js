@@ -15,7 +15,8 @@ const strip 					= require('rollup-plugin-strip');
 const resolve  				= require('rollup-plugin-node-resolve');
 const runSequence 		= require('run-sequence');
 const rollup 					= require('rollup');
-const tokenConfig 		= require('./src/config/local.json');
+const localConfig 		= require('./src/config/local.json');
+const productionConfig= require('./src/config/production.json');
 
 const input  = {
 	html        : 'src/*.html',
@@ -124,7 +125,7 @@ gulp.task('copy-assets', function() {
 
 gulp.task('token-replace', function(){
 	return gulp.src(['dist/**/*.html', 'dist/**/*.js', 'dist/sitemap.xml', 'dist/manifest.json'])
-	.pipe(replace({global:tokenConfig, prefix: '{%', suffix: '%}'}))
+	.pipe(replace({global:localConfig, prefix: '{%', suffix: '%}'}))
 	.pipe(gulp.dest('dist'))
 });
 
