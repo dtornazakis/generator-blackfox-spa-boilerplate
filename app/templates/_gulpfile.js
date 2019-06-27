@@ -144,11 +144,11 @@ gulp.task('live-reload', function() {
 });
 
 gulp.task('build', function() {
-	runSequence(['copy-assets', 'compile-css', 'compile-scripts'],'token-replace');
+	runSequence(['copy-assets', 'copy-templates', 'compile-css', 'compile-scripts'],'token-replace');
 });
 
 gulp.task('serve', function() {
-	runSequence(['copy-assets', 'compile-css', 'compile-scripts'],'token-replace', 'live-reload', 'watch');
+	runSequence(['copy-assets', 'copy-templates', 'compile-css', 'compile-scripts'],'token-replace', 'live-reload', 'watch');
 });
 
 gulp.task('deploy', ['build', 'optimize-images', 'upload']);
