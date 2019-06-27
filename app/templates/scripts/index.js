@@ -1,4 +1,4 @@
-import { Start } from 'base-repository-system';
+import { Start } from 'blackfox-spa-generator';
 
 const menu = [
 	{
