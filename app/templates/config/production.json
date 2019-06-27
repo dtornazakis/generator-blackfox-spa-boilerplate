@@ -18,7 +18,7 @@
       "theme": "<%= theme %>",
       "email": "info@<%= domain %>",
       "phone": "(+30) 210.00.00.000",
-      "address": "___, ____, _____, GREECE",
+      "address": "___, ____, _____, GREECE"
     }
   }
 }
