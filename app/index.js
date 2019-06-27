@@ -48,6 +48,11 @@ module.exports = class extends Generator {
     	},
     	{
         type	: 'input',
+        name	: 'keywords',
+        message	: 'Add some keywords to better describe the application (separate with comma)'
+    	},
+    	{
+        type	: 'input',
         name	: 'theme',
         message	: 'Specify the theme color of the application (in hex format without the `#` sign)'
     	}
@@ -147,6 +152,7 @@ module.exports = class extends Generator {
 					title: answers.title,
 					shortTitle: answers.shortTitle || answers.title,
 					description: answers.description,
+					keywords: answers.keywords,
 					theme: answers.theme ? '#' + answers.theme : '#000000'
 				}
 			);
@@ -161,6 +167,7 @@ module.exports = class extends Generator {
 					title: answers.title,
 					shortTitle: answers.shortTitle || answers.title,
 					description: answers.description,
+					keywords: answers.keywords,
 					theme: answers.theme ? '#' + answers.theme : '#000000'
 				}
 			);

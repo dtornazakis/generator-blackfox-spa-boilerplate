@@ -19,7 +19,7 @@ const localConfig 		= require('./src/config/local.json');
 const productionConfig= require('./src/config/production.json');
 
 const input  = {
-	html        : 'src/*.html',
+	html        : 'src/index.html',
 	images      : 'src/images/**',
 	stylesheets : 'src/stylesheets/**/*.sass',
 	scripts    	: 'src/scripts/**/*.js',
@@ -103,10 +103,14 @@ gulp.task('compile-templates', function() {
   .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy-assets', function() {
 
-	gulp.src(input.html)
+gulp.task('copy-templates', function() {
+
+	return gulp.src(input.html)
 	.pipe(gulp.dest(output.root));
+});
+
+gulp.task('copy-assets', function() {
 
 	gulp.src(input.images)
 	.pipe(gulp.dest(output.images));
@@ -124,7 +128,7 @@ gulp.task('copy-assets', function() {
 });
 
 gulp.task('token-replace', function(){
-	return gulp.src(['dist/**/*.html', 'dist/**/*.js', 'dist/sitemap.xml', 'dist/manifest.json'])
+	return gulp.src(['dist/*.html', 'dist/**/*.js', 'dist/sitemap.xml', 'dist/manifest.json'])
 	.pipe(replace({global:localConfig, prefix: '{%', suffix: '%}'}))
 	.pipe(gulp.dest('dist'))
 });
@@ -150,7 +154,9 @@ gulp.task('serve', function() {
 gulp.task('deploy', ['build', 'optimize-images', 'upload']);
 
 gulp.task('watch', function() {
-	gulp.watch(input.html, ['token-replace']);
+	gulp.watch(input.html, function() {
+		runSequence('copy-templates', 'token-replace');
+	});
 	gulp.watch(input.images, ['copy-assets']);
 	gulp.watch(input.scripts, function() {
 		runSequence('compile-scripts', 'token-replace');

@@ -13,7 +13,7 @@
       "title": "<%= title %>",
       "shortTitle": "<%= shortTitle %>",
       "description": "<%= description %>",
-      "keywords": "keyword 1, keyword 2",
+      "keywords": "<%= keywords %>",
       "author": "Dimitris Tornazakis",
       "theme": "<%= theme %>",
       "email": "info@<%= domain %>",

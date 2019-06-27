@@ -2,8 +2,8 @@
 <html lang="el">
 	<head>
 		<meta charset="utf-8" />
-		<title><%= title %> | <%= domain %></title>
-		<meta name="description" content="<%= description %>">
+		<title>{%tokens.meta.title%} | {%tokens.domain%}</title>
+		<meta name="description" content="{%tokens.meta.description%}">
 
 		<!-- Google Tag Manager -->
 		<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -14,13 +14,13 @@
 		<!-- End Google Tag Manager -->
 
 		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-		<meta name="author" content="<%= author %>">
-		<meta name="keywords" content="<%= keywords %>">
+		<meta name="author" content="Dimitris Tornazakis">
+		<meta name="keywords" content="{%tokens.meta.keywords%}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="<%= robots %>">
-		<meta name="theme-color" content="<%= theme %>" />
+		<meta name="robots" content="{%tokens.robots%}">
+		<meta name="theme-color" content="#440000" />
 
-		<base href="<%= url %>">
+		<base href="{%tokens.protocol%}{%tokens.domain%}{%tokens.port%}">
 
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 		<link rel="manifest" href="/manifest.json">
@@ -28,10 +28,10 @@
 		<link rel="stylesheet" href="/vendor/tippy/tippy.min.css">
 		<link rel="stylesheet" href="/stylesheets/bundle.css">
 
-		<meta property="og:title" content="<%= title %> | <%= domain %>">
+		<meta property="og:title" content="{%tokens.meta.title%}">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="<%= url %>">
-		<meta property="og:description" content="<%= description %>">
+		<meta property="og:url" content="{%tokens.protocol%}{%tokens.domain%}{%tokens.port%}">
+		<meta property="og:description" content="{%tokens.meta.description%}">
 	</head>
 	<body class="el" data-page="home">
 		<div id="home">
@@ -46,19 +46,19 @@
 						<ul>
 							<li class="phone">
 								<i class="icon fa fa-fw fa-phone"></i>
-								<p data-item><%= contact.phone %></p>
+								<p data-item>{%tokens.meta.phone%}</p>
 							</li>
 							<li class="email">
 									<i class="icon fa fa-fw fa-envelope"></i>
-									<p><a href="mailto:<%= contact.email %>" data-item><%= contact.email %></a></p>
+									<p><a href="mailto:{%tokens.meta.email%}" data-item>{%tokens.meta.email%}</a></p>
 							</li>
 							<li class="address">
 								<i class="icon fa fa-fw fa-map-marker"></i>
-								<p data-item><%= contact.address %></p>
+								<p data-item>{%tokens.meta.address%}</p>
 							</li>
 						</ul>
 					</div>
-					<p class="copyright">&copy; 2018 <%= domain %></p>
+					<p class="copyright">&copy; 2018 {%tokens.domain%}</p>
 				</div>
 			</footer>
 		</div>
