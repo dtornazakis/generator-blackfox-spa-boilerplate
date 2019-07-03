@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.1.6",
-    "blackfox-spa-generator": "^1.0.3",
+    "blackfox-spa-generator": "^1.0.4",
     "cors": "^2.8.5",
     "navigo": "^7.1.2",
     "nodemailer": "^4.7.0",

@@ -1,6 +1,6 @@
 {
   "name": "generator-blackfox-spa-boilerplate",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A Yeoman generator to get you up and running with a powerful front end build system structure",
   "main": "index.js",
   "scripts": {
