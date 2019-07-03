@@ -77,6 +77,11 @@ module.exports = class extends Generator {
 			);
 
 			this.fs.copy(
+				this.templatePath('templates'),
+				this.destinationPath('src/templates')
+			);
+
+			this.fs.copy(
 				this.templatePath('vendor'),
 				this.destinationPath('src/vendor')
 			);
