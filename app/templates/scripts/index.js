@@ -8,11 +8,11 @@ const menu = [
 		'url': '#about'
 	},
 	{
-		'code': 'vote',
-		'name': 'Vote MD',
+		'code': 'sample',
+		'name': 'Sample MD',
 		'order': 2,
-		'url': '#vote',
-		'path': '/templates/pages/votes.md'
+		'url': '#sample',
+		'path': '/templates/sample.md'
 	}
 ];
 
